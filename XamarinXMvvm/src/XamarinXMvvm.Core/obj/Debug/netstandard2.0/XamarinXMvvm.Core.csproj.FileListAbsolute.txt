@@ -1,0 +1,10 @@
+C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Core\bin\Debug\netstandard2.0\XamarinXMvvm.Core.deps.json
+C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Core\bin\Debug\netstandard2.0\XamarinXMvvm.Core.dll
+C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Core\bin\Debug\netstandard2.0\XamarinXMvvm.Core.pdb
+C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Core\obj\Debug\netstandard2.0\XamarinXMvvm.Core.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Core\obj\Debug\netstandard2.0\XamarinXMvvm.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Core\obj\Debug\netstandard2.0\XamarinXMvvm.Core.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Core\obj\Debug\netstandard2.0\XamarinXMvvm.Core.AssemblyInfo.cs
+C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Core\obj\Debug\netstandard2.0\XamarinXMvvm.Core.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Core\obj\Debug\netstandard2.0\XamarinXMvvm.Core.dll
+C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Core\obj\Debug\netstandard2.0\XamarinXMvvm.Core.pdb

@@ -1,0 +1,17 @@
+C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.UI\bin\Debug\netstandard2.0\XamarinXMvvm.UI.deps.json
+C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.UI\bin\Debug\netstandard2.0\XamarinXMvvm.UI.dll
+C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.UI\bin\Debug\netstandard2.0\XamarinXMvvm.UI.pdb
+C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.UI\bin\Debug\netstandard2.0\XamarinXMvvm.Core.dll
+C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.UI\bin\Debug\netstandard2.0\XamarinXMvvm.Core.pdb
+C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.UI\obj\Debug\netstandard2.0\XamarinXMvvm.UI.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.UI\obj\Debug\netstandard2.0\XamarinXMvvm.UI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.UI\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.UI\obj\Debug\netstandard2.0\Pages\HomePage.xaml.g.cs
+C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.UI\obj\Debug\netstandard2.0\Resources\Colors.xaml.g.cs
+C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.UI\obj\Debug\netstandard2.0\XamarinXMvvm.UI.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.UI\obj\Debug\netstandard2.0\XamarinXMvvm.UI.AssemblyInfo.cs
+C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.UI\obj\Debug\netstandard2.0\XamarinXMvvm.UI.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.UI\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.UI\obj\Debug\netstandard2.0\XamarinXMvvm.UI.csproj.CopyComplete
+C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.UI\obj\Debug\netstandard2.0\XamarinXMvvm.UI.dll
+C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.UI\obj\Debug\netstandard2.0\XamarinXMvvm.UI.pdb
