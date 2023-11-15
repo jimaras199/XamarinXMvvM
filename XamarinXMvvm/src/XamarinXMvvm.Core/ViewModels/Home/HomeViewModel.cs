@@ -40,21 +40,13 @@ namespace XamarinXMvvm.Core.ViewModels.Home
 
         private async Task ExecuteTablesCommandAsync()
         {
-            // Your logic for Tables command
-            //try
-            //{
-            //    await _navigationService.Navigate<TablesViewModel>();
-            //}
-            //catch (Exception ex) {
-            //    Console.WriteLine("Exception Message: " + ex.Message);
-            //    Console.WriteLine("Exception Stack Trace: " + ex.StackTrace);
-            //}
+                await _navigationService.Navigate<TablesViewModel>();
         }
 
         private async Task ExecuteBoatCommandAsync()
         {
             // Your logic for Boat command
-            //await _navigationService.Navigate<BoatViewModel>();
+            await _navigationService.Navigate<BoatViewModel>();
         }
     }
 }
