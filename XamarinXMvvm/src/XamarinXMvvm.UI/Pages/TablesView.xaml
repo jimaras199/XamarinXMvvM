@@ -12,8 +12,31 @@
     x:TypeArguments="viewModels:TablesViewModel" 
     NavigationPage.HasNavigationBar="False">
 
-    <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-        <Button Text="Tables" Margin="0,0,0,50" TextTransform="None" CornerRadius="10"/>
-    </StackLayout>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="3*" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <BoxView Grid.Column="0" Color="{StaticResource CustomBlue}" />
+            
+
+            <BoxView Grid.Column="1" Color="{StaticResource CustomRed}" />
+            <Label Grid.Column="1" Text="{Binding CurrentTime, StringFormat='{0:HH:mm:ss}'}"
+                   FontSize="25"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"/>
+        </Grid>
+        <BoxView Grid.Row="1"/>
+        <BoxView Grid.Row="2" Color="{StaticResource CustomYellow}" />
+        <Label Grid.Row="2" x:Name="Lorem_Ipsum_content"  Text="{Binding Lorem_Ipsum}" FontSize="12" Padding="0" SizeChanged="OnSizeChanged"/>
+    </Grid>
 
 </views:MvxContentPage>

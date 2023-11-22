@@ -1,12 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows.Input;
 using System.Threading.Tasks;
 using MvvmCross.Commands;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
-using Microsoft.Extensions.Logging;
 
 namespace XamarinXMvvm.Core.ViewModels.Home
 {
@@ -40,12 +36,11 @@ namespace XamarinXMvvm.Core.ViewModels.Home
 
         private async Task ExecuteTablesCommandAsync()
         {
-                await _navigationService.Navigate<TablesViewModel>();
+            await _navigationService.Navigate<TablesViewModel>();
         }
 
         private async Task ExecuteBoatCommandAsync()
         {
-            // Your logic for Boat command
             await _navigationService.Navigate<BoatViewModel>();
         }
     }
