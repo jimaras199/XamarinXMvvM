@@ -1,4 +1,5 @@
 @string/appbar_scrolling_view_behavior;C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Droid\obj\Debug\120\lp\62\jl\res\layout\rootlayout.xml
+adaptive-icon;obj\Debug\120\res\mipmap-anydpi-v26\ic_launcher.xml
 alpha;C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Droid\obj\Debug\120\lp\62\jl\res\anim\enterfromleft.xml
 alpha;C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Droid\obj\Debug\120\lp\62\jl\res\anim\exittoleft.xml
 androidx.appcompat.widget.Toolbar;C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Droid\obj\Debug\120\lp\62\jl\res\layout\fallbacktoolbardonotuse.xml
@@ -11,6 +12,7 @@ androidx.coordinatorlayout.widget.CoordinatorLayout;C:\Users\User\source\repos\X
 attr;C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Droid\obj\Debug\120\lp\5\jl\res\values\mvxbindingattributes.xml
 attr;C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Droid\obj\Debug\120\lp\62\jl\res\values\attrs.xml
 attr;C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Droid\obj\Debug\120\lp\8\jl\res\values\attrs.xml
+background;obj\Debug\120\res\mipmap-anydpi-v26\ic_launcher.xml
 color;obj\Debug\120\res\drawable\splash_screen.xml
 color;obj\Debug\120\res\values\colors.xml
 com.google.android.material.appbar.AppBarLayout;C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Droid\obj\Debug\120\lp\62\jl\res\layout\flyoutcontent.xml
@@ -25,6 +27,7 @@ declare-styleable;C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\Xamar
 declare-styleable;C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Droid\obj\Debug\120\lp\62\jl\res\values\attrs.xml
 declare-styleable;C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Droid\obj\Debug\120\lp\8\jl\res\values\attrs.xml
 dimen;obj\Debug\120\res\values\dimens.xml
+foreground;obj\Debug\120\res\mipmap-anydpi-v26\ic_launcher.xml
 FrameLayout;C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Droid\obj\Debug\120\lp\62\jl\res\layout\bottomtablayout.xml
 item;C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Droid\obj\Debug\120\lp\5\jl\res\values\ids.xml
 item;C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Droid\obj\Debug\120\lp\5\jl\res\values\mvxbindingattributes.xml
@@ -35,6 +38,7 @@ item;obj\Debug\120\res\values-v19\styles.xml
 item;obj\Debug\120\res\values-v21\styles.xml
 layer-list;obj\Debug\120\res\drawable\splash_screen.xml
 LinearLayout;C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Droid\obj\Debug\120\lp\62\jl\res\layout\bottomtablayout.xml
+monochrome;obj\Debug\120\res\mipmap-anydpi-v26\ic_launcher.xml
 resources;C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Droid\obj\Debug\120\lp\5\jl\res\values\ids.xml
 resources;C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Droid\obj\Debug\120\lp\5\jl\res\values\mvxbindingattributes.xml
 resources;C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Droid\obj\Debug\120\lp\62\jl\res\values\attrs.xml

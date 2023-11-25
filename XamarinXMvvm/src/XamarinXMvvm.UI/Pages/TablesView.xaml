@@ -36,8 +36,7 @@
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand"/>
         </Grid>
-        <ScrollView Orientation="Both" Grid.Row="1">
-            <Grid BindingContext="{Binding}">
+            <Grid Grid.Row="1" BindingContext="{Binding}">
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -71,7 +70,6 @@
                     </ListView.ItemTemplate>
                 </ListView>
             </Grid>
-        </ScrollView>
         
         <Label Grid.Row="2" x:Name="Lorem_Ipsum_content"  Text="{Binding Lorem_Ipsum}" FontSize="12" Padding="0" SizeChanged="OnSizeChanged" BackgroundColor="{StaticResource CustomYellow}"/>
     </Grid>
