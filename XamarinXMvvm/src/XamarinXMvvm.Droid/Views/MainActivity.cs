@@ -16,7 +16,7 @@ using XamarinXMvvm.Core.ViewModels.Main;
 namespace XamarinXMvvm.Droid
 {
     [Activity(
-        Theme = "@style/AppTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+        Theme = "@style/AppTheme", Icon ="@mipmap/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : MvxFormsAppCompatActivity<MainViewModel>
     {
         protected override void OnCreate(Bundle bundle)

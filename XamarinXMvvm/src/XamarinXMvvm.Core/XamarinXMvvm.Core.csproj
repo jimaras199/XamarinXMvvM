@@ -6,15 +6,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Demo_toys_db.json" />
     <None Remove="images\surf.svg" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Demo_toys_db.json" />
     <EmbeddedResource Include="images\surf.svg" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MvvmCross" Version="8.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="SkiaSharp.Extended" Version="1.60.0" />
     <PackageReference Include="SkiaSharp.Svg" Version="1.60.0" />
     <PackageReference Include="SkiaSharp.Views.Forms" Version="2.88.6" />

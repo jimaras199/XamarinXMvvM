@@ -5,6 +5,7 @@ C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.iOS\bin\iP
 C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.iOS\bin\iPhoneSimulator\Debug\MvvmCross.pdb
 C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.iOS\bin\iPhoneSimulator\Debug\MvvmCross.Forms.dll
 C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.iOS\bin\iPhoneSimulator\Debug\MvvmCross.Forms.pdb
+C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.iOS\bin\iPhoneSimulator\Debug\Newtonsoft.Json.dll
 C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.iOS\bin\iPhoneSimulator\Debug\SkiaSharp.dll
 C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.iOS\bin\iPhoneSimulator\Debug\SkiaSharp.pdb
 C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.iOS\bin\iPhoneSimulator\Debug\SkiaSharp.Extended.dll

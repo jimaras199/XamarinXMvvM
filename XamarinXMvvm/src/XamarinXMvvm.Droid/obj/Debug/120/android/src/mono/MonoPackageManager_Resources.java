@@ -13,6 +13,7 @@ public class MonoPackageManager_Resources {
 		"Microsoft.Extensions.Logging.Abstractions.dll",
 		"MvvmCross.dll",
 		"MvvmCross.Forms.dll",
+		"Newtonsoft.Json.dll",
 		"SkiaSharp.dll",
 		"SkiaSharp.Extended.dll",
 		"SkiaSharp.Extended.Svg.dll",

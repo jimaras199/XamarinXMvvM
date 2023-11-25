@@ -93,6 +93,7 @@ C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Droid\obj\
 C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Droid\obj\Debug\120\android\assets\MvvmCross.Forms.pdb
 C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Droid\obj\Debug\120\android\assets\MvvmCross.pdb
 C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Droid\obj\Debug\120\android\assets\netstandard.dll
+C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Droid\obj\Debug\120\android\assets\Newtonsoft.Json.dll
 C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Droid\obj\Debug\120\android\assets\SkiaSharp.dll
 C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Droid\obj\Debug\120\android\assets\SkiaSharp.Extended.dll
 C:\Users\User\source\repos\XamarinXMvvm\XamarinXMvvm\src\XamarinXMvvm.Droid\obj\Debug\120\android\assets\SkiaSharp.Extended.Svg.dll
