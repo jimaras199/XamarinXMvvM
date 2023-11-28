@@ -4209,14 +4209,6 @@
             "target": "Package",
             "version": "[8.0.2, )"
           },
-          "MvvmCross": {
-            "target": "Package",
-            "version": "[8.0.2, )"
-          },
-          "MvvmCross.Forms": {
-            "target": "Package",
-            "version": "[8.0.2, )"
-          },
           "MvvmCross.Forms": {
             "target": "Package",
             "version": "[8.0.2, )"
@@ -4225,19 +4217,7 @@
             "target": "Package",
             "version": "[13.0.3, )"
           },
-          "Newtonsoft.Json": {
-            "target": "Package",
-            "version": "[13.0.3, )"
-          },
           "SkiaSharp.Extended": {
-            "target": "Package",
-            "version": "[1.60.0, )"
-          },
-          "SkiaSharp.Extended": {
-            "target": "Package",
-            "version": "[1.60.0, )"
-          },
-          "SkiaSharp.Svg": {
             "target": "Package",
             "version": "[1.60.0, )"
           },
@@ -4249,14 +4229,6 @@
             "target": "Package",
             "version": "[2.88.6, )"
           },
-          "SkiaSharp.Views.Forms": {
-            "target": "Package",
-            "version": "[2.88.6, )"
-          },
-          "Xamarin.AndroidX.Core": {
-            "target": "Package",
-            "version": "[1.6.0.3, )"
-          },
           "Xamarin.AndroidX.Core": {
             "target": "Package",
             "version": "[1.6.0.3, )"
@@ -4265,19 +4237,7 @@
             "target": "Package",
             "version": "[1.2.1.3, )"
           },
-          "Xamarin.AndroidX.RecyclerView": {
-            "target": "Package",
-            "version": "[1.2.1.3, )"
-          },
           "Xamarin.FFImageLoading.Svg": {
-            "target": "Package",
-            "version": "[2.4.11.982, )"
-          },
-          "Xamarin.FFImageLoading.Svg": {
-            "target": "Package",
-            "version": "[2.4.11.982, )"
-          },
-          "Xamarin.FFImageLoading.Svg.Forms": {
             "target": "Package",
             "version": "[2.4.11.982, )"
           },
@@ -4288,14 +4248,6 @@
           "Xamarin.Forms": {
             "target": "Package",
             "version": "[5.0.0.2337, )"
-          },
-          "Xamarin.Forms": {
-            "target": "Package",
-            "version": "[5.0.0.2337, )"
-          },
-          "Xamarin.Google.Android.Material": {
-            "target": "Package",
-            "version": "[1.4.0.4, )"
           },
           "Xamarin.Google.Android.Material": {
             "target": "Package",

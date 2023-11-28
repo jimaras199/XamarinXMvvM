@@ -1,12 +1,13 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
-using MvvmCross.Binding.BindingContext;
+using System.Windows.Input;
 using MvvmCross.ViewModels;
 using Newtonsoft.Json;
+using Xamarin.Forms;
 
 namespace XamarinXMvvm.Core.ViewModels.Home
 {
@@ -15,30 +16,36 @@ namespace XamarinXMvvm.Core.ViewModels.Home
         private ITimeService _timeService;
         public string Lorem_Ipsum { get; set; }
         public string Rawjson { get; set; }
-        public List<JsonContent> ListJson { set; get; }
+
+
+        public ObservableCollection<JsonContent> ListJson
+        {
+            get;set;
+        }
+
+        private DateTime _currentTime;
 
         public class JsonContent
         {
-            public int Id { get; set; }
+            public string Id { get; set; }
             public string Name { get; set; }
             public string Description { get; set; }
-            public decimal Price { get; set; }
+            public string Price { get; set; }
             public string Manufacturer { get; set; }
             public string Age_range { get; set; }
             public string Material { get; set; }
-            public decimal Weight { get; set; }
+            public string Weight { get; set; }
             public string Color { get; set; }
             public string Category { get; set; }
         }
 
-
         // Property to store the current time
-        private DateTime _currentTime;
         public DateTime CurrentTime
         {
             get => _currentTime;
             set => SetProperty(ref _currentTime, value);
         }
+
         private void OnTimeUpdated(object sender, DateTime currentTime)
         {
             CurrentTime = currentTime;
@@ -46,17 +53,24 @@ namespace XamarinXMvvm.Core.ViewModels.Home
 
         public override async Task Initialize()
         {
-            await RenderJsonAsync().ConfigureAwait(true);
+            await base.Initialize();
+            await RenderJsonAsync().ConfigureAwait(false);
+
             _timeService = new TimeService();
             _timeService.OnTimeUpdated += OnTimeUpdated;
-            await base.Initialize();
+
+            Console.WriteLine("ListJson items: " + ListJson.Count());
+            Console.WriteLine("ModelView Initialize done");
         }
 
         private async Task RenderJsonAsync()
         {
-            var json = await ReadJsonFileAsync();
-            ListJson = JsonConvert.DeserializeObject<List<JsonContent>>(json);
+            ListJson = new ObservableCollection<JsonContent>();
+            var json = await ReadJsonFileAsync().ConfigureAwait(true);
+            JsonConvert.DeserializeObject<List<JsonContent>>(json).ForEach(item => ListJson.Add(item));
+            Console.WriteLine("LisJson items: " + ListJson.Count());
             renderRawLines(ListJson);
+            Console.WriteLine("ModelView RenderJsonAsync done");
         }
 
         private async Task<string> ReadJsonFileAsync()
@@ -69,7 +83,7 @@ namespace XamarinXMvvm.Core.ViewModels.Home
             }
         }
 
-        private void renderRawLines(List<JsonContent> list)
+        private void renderRawLines(IEnumerable<JsonContent> list)
         {
             foreach (JsonContent item in list)
             {
@@ -83,45 +97,5 @@ namespace XamarinXMvvm.Core.ViewModels.Home
             Rawjson = Rawjson.Substring(0, Rawjson.LastIndexOf(Environment.NewLine));
             Rawjson = Rawjson.Substring(0, Rawjson.LastIndexOf(Environment.NewLine));
         }
-
-        private string _id;
-
-        public string Id { get => _id; set => SetProperty(ref _id, value); }
-
-        private string _name;
-
-        public string Name { get => _name; set => SetProperty(ref _name, value); }
-
-        private string _description;
-
-        public string Description { get => _description; set => SetProperty(ref _description, value); }
-
-        private string _price;
-
-        public string Price { get => _price; set => SetProperty(ref _price, value); }
-
-        private string _manufacturer;
-
-        public string Manufacturer { get => _manufacturer; set => SetProperty(ref _manufacturer, value); }
-
-        private string _material;
-
-        public string Material { get => _material; set => SetProperty(ref _material, value); }
-
-        private string _weight;
-
-        public string Weight { get => _weight; set => SetProperty(ref _weight, value); }
-
-        private string _color;
-
-        public string Color { get => _color; set => SetProperty(ref _color, value); }
-
-        private string _category;
-
-        public string Category { get => _category; set => SetProperty(ref _category, value); }
-
-        private string _age_range;
-
-        public string Age_range { get => _age_range; set => SetProperty(ref _age_range, value); }
     }
 }

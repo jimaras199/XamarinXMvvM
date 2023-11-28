@@ -17,6 +17,8 @@ namespace XamarinXMvvm.UI.Pages
         public TablesView()
         {
             InitializeComponent();
+            Console.WriteLine("ListJson items: " + Collection.ItemsSource);
+            Console.WriteLine("code InitializeComponent done");
         }
         private void OnSizeChanged(object sender, EventArgs e)
         {
@@ -26,6 +28,7 @@ namespace XamarinXMvvm.UI.Pages
 
             for (var i = 0; i < repeats; i++)
                 label.Text += Contentstring;
+            Console.WriteLine("code OnSizeChanged done");
         }
 
         private int calculate_repeats(Label label)
