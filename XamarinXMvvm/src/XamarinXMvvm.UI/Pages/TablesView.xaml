@@ -5,20 +5,19 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:XamarinXMvvm.UI.Pages"
     xmlns:viewModels="clr-namespace:XamarinXMvvm.Core.ViewModels.Home;assembly=XamarinXMvvm.Core"
-    xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
-    x:DataType="viewModels:TablesViewModel"
+    xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms" 
     x:TypeArguments="viewModels:TablesViewModel" 
     NavigationPage.HasNavigationBar="False">
 
-    
-    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+
+    <Grid ColumnSpacing="0" RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
             <RowDefinition Height="1*" />
             <RowDefinition Height="3*" />
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0">
+        <Grid Grid.Row="0" ColumnSpacing="0" RowSpacing="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*" />
                 <ColumnDefinition Width="1*" />
@@ -36,49 +35,30 @@
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand"/>
         </Grid>
-        <Grid Grid.Row="1">
-
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-
-            <CollectionView x:Name="Collection" ItemsSource="{Binding ListJson}" SelectionMode="None" 
-                            IsVisible="True" HorizontalScrollBarVisibility="Always" VerticalScrollBarVisibility="Never">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate x:DataType="viewModels:TablesViewModel+JsonContent">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="20"/>
-                                <ColumnDefinition Width="100"/>
-                                <ColumnDefinition Width="400"/>
-                                <ColumnDefinition Width="400"/>
-                                <ColumnDefinition Width="400"/>
-                                <ColumnDefinition Width="400"/>
-                                <ColumnDefinition Width="400"/>
-                                <ColumnDefinition Width="400"/>
-                                <ColumnDefinition Width="400"/>
-                                <ColumnDefinition Width="400"/>
-                            </Grid.ColumnDefinitions>
-
-                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding Id}" LineBreakMode="NoWrap" HorizontalOptions="FillAndExpand"/>
-                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding Name}" LineBreakMode="NoWrap" HorizontalOptions="FillAndExpand"/>
-                            <Label Grid.Row="0" Grid.Column="2" Text="{Binding Description}" LineBreakMode="NoWrap" HorizontalOptions="FillAndExpand"/>
-                            <Label Grid.Row="0" Grid.Column="3" Text="{Binding Price}" LineBreakMode="NoWrap" HorizontalOptions="FillAndExpand"/>
-                            <Label Grid.Row="0" Grid.Column="4" Text="{Binding Manufacturer}" LineBreakMode="NoWrap" HorizontalOptions="FillAndExpand"/>
-                            <Label Grid.Row="0" Grid.Column="5" Text="{Binding Age_range}" LineBreakMode="NoWrap" HorizontalOptions="FillAndExpand"/>
-                            <Label Grid.Row="0" Grid.Column="6" Text="{Binding Material}" LineBreakMode="NoWrap" HorizontalOptions="FillAndExpand"/>
-                            <Label Grid.Row="0" Grid.Column="7" Text="{Binding Weight}" LineBreakMode="NoWrap" HorizontalOptions="FillAndExpand"/>
-                            <Label Grid.Row="0" Grid.Column="8" Text="{Binding Color}" LineBreakMode="NoWrap" HorizontalOptions="FillAndExpand"/>
-                            <Label Grid.Row="0" Grid.Column="9" Text="{Binding Category}" LineBreakMode="NoWrap" HorizontalOptions="FillAndExpand"/>
+        <ScrollView Grid.Row="1" SizeChanged="SizeChangedScroll" Orientation="Both" BackgroundColor="White">
+            <StackLayout Spacing="0" x:Name="StackTable"  BindableLayout.ItemsSource="{Binding ListJson}" >
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate >
+                        <Grid  BackgroundColor="Black" ColumnSpacing="1" RowSpacing="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Grid.Column="0" FontSize="12" BackgroundColor="White" Text="{Binding Id}" LineBreakMode="NoWrap" HorizontalOptions="FillAndExpand"/>
+                            <Label Grid.Column="1" FontSize="12" BackgroundColor="White" Text="{Binding Name}" LineBreakMode="NoWrap" HorizontalOptions="FillAndExpand"/>
+                            <Label Grid.Column="2" FontSize="12" BackgroundColor="White" Text="{Binding Description}" LineBreakMode="NoWrap" HorizontalOptions="FillAndExpand"/>
+                            <Label Grid.Column="3" FontSize="12" BackgroundColor="White" Text="{Binding Price}" LineBreakMode="NoWrap" HorizontalOptions="FillAndExpand"/>
+                            <Label Grid.Column="4" FontSize="12" BackgroundColor="White" Text="{Binding Manufacturer}" LineBreakMode="NoWrap" HorizontalOptions="FillAndExpand"/>
+                            <Label Grid.Column="5" FontSize="12" BackgroundColor="White" Text="{Binding Age_range}" LineBreakMode="NoWrap" HorizontalOptions="FillAndExpand"/>
+                            <Label Grid.Column="6" FontSize="12" BackgroundColor="White" Text="{Binding Material}" LineBreakMode="NoWrap" HorizontalOptions="FillAndExpand"/>
+                            <Label Grid.Column="7" FontSize="12" BackgroundColor="White" Text="{Binding Weight}" LineBreakMode="NoWrap" HorizontalOptions="FillAndExpand"/>
+                            <Label Grid.Column="8" FontSize="12" BackgroundColor="White" Text="{Binding Color}" LineBreakMode="NoWrap" HorizontalOptions="FillAndExpand"/>
+                            <Label Grid.Column="9" FontSize="12" BackgroundColor="White" Text="{Binding Category}" LineBreakMode="NoWrap" HorizontalOptions="FillAndExpand"/>
                         </Grid>
                     </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </Grid>
-        <Label Grid.Row="2" x:Name="Lorem_Ipsum_content"  Text="{Binding Lorem_Ipsum}" FontSize="12" Padding="0" SizeChanged="OnSizeChanged" BackgroundColor="{StaticResource CustomYellow}"/>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+        </ScrollView>
+        <Label Grid.Row="2" x:Name="Lorem_Ipsum_content"  Text="{Binding Lorem_Ipsum}" FontSize="12" Padding="0" SizeChanged="SizeChangedLabel" BackgroundColor="{StaticResource CustomYellow}"/>
     </Grid>
 </views:MvxContentPage>

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,15 +17,7 @@ namespace XamarinXMvvm.Core.ViewModels.Home
         private ITimeService _timeService;
         public string Lorem_Ipsum { get; set; }
         public string Rawjson { get; set; }
-
-
-        public ObservableCollection<JsonContent> ListJson
-        {
-            get;set;
-        }
-
-        private DateTime _currentTime;
-
+        public ObservableCollection<JsonContent> ListJson { get; set; }
         public class JsonContent
         {
             public string Id { get; set; }
@@ -38,7 +31,8 @@ namespace XamarinXMvvm.Core.ViewModels.Home
             public string Color { get; set; }
             public string Category { get; set; }
         }
-
+        private DateTime _currentTime;
+    
         // Property to store the current time
         public DateTime CurrentTime
         {
@@ -55,14 +49,12 @@ namespace XamarinXMvvm.Core.ViewModels.Home
         {
             await base.Initialize();
             await RenderJsonAsync().ConfigureAwait(false);
-
             _timeService = new TimeService();
             _timeService.OnTimeUpdated += OnTimeUpdated;
 
             Console.WriteLine("ListJson items: " + ListJson.Count());
             Console.WriteLine("ModelView Initialize done");
         }
-
         private async Task RenderJsonAsync()
         {
             ListJson = new ObservableCollection<JsonContent>();

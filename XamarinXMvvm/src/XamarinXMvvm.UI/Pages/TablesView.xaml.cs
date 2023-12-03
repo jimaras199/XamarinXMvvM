@@ -1,4 +1,7 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using MvvmCross.Forms.Presenters.Attributes;
 using MvvmCross.Forms.Views;
 using MvvmCross.ViewModels;
@@ -17,10 +20,58 @@ namespace XamarinXMvvm.UI.Pages
         public TablesView()
         {
             InitializeComponent();
-            Console.WriteLine("ListJson items: " + Collection.ItemsSource);
             Console.WriteLine("code InitializeComponent done");
         }
-        private void OnSizeChanged(object sender, EventArgs e)
+
+        private void SizeChangedScroll(object sender, EventArgs e)
+        {
+            Device.BeginInvokeOnMainThread(() => { SetWidths(); });
+            Console.WriteLine("code SizeChangedScroll done");
+        }
+        private void SetWidths()
+        {
+            List<double> GreaterLengths = MaxLenRowPositions();
+            SetLengths(GreaterLengths);
+        }
+        private void SetLengths(List<double> greaterLengths)
+        {
+            var tablestack = (StackLayout)FindByName("StackTable");
+
+            if (tablestack != null)
+            {
+                foreach (View child in tablestack.Children)
+                {
+                    var gridTable = (Grid)child;
+                    foreach (var length in greaterLengths)
+                    {
+                        gridTable.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(length) });
+                    }
+                }
+            }
+        }     
+        private List<double> MaxLenRowPositions()
+        {
+            var Positions = new List<double> { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+            var tablestack = (StackLayout)FindByName("StackTable");
+
+            if (tablestack != null)
+            {
+                foreach (View child in tablestack.Children)
+                {
+                    var gridTable = (Grid)child;
+                    for(var i = 0 ; i < gridTable.Children.Count; i++)
+                    {
+                        var firstColumnLabel = (Label)gridTable.Children[i];
+                        Size measuredSize = firstColumnLabel.Measure(double.PositiveInfinity, double.PositiveInfinity).Request;
+                        Positions[i] = Math.Max(measuredSize.Width, Positions[i]) + 0.5;
+                    }
+                }
+            }
+            else
+                Console.WriteLine("StackTable not found");
+            return Positions;
+        }
+        private void SizeChangedLabel(object sender, EventArgs e)
         {
             var label = (Label)sender;
 
@@ -28,9 +79,8 @@ namespace XamarinXMvvm.UI.Pages
 
             for (var i = 0; i < repeats; i++)
                 label.Text += Contentstring;
-            Console.WriteLine("code OnSizeChanged done");
+            Console.WriteLine("code SizeChangedLabel done");
         }
-
         private int calculate_repeats(Label label)
         {
             double totalHeight = 0, height = 0;
@@ -39,7 +89,6 @@ namespace XamarinXMvvm.UI.Pages
             var repeats = (int)(totalHeight / occupied_space) + 1;
             return repeats;
         }
-
         private int calculate_lines(Label label, ref double totalHeight, ref double height)
         {
             label.Measure(double.PositiveInfinity, double.PositiveInfinity);
