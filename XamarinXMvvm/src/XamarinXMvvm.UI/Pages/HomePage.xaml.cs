@@ -18,6 +18,7 @@ namespace XamarinXMvvm.UI.Pages
         public HomePage()
         {
             InitializeComponent();
+            System.Diagnostics.Debug.WriteLine($"[App Log] {DateTime.Now:yyyy-MM-dd HH:mm:ss}: HomeView initialized!");
         }
     }
 }

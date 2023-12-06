@@ -39,7 +39,7 @@
             <StackLayout Spacing="0" x:Name="StackTable"  BindableLayout.ItemsSource="{Binding ListJson}" >
                 <BindableLayout.ItemTemplate>
                     <DataTemplate >
-                        <Grid  BackgroundColor="Black" ColumnSpacing="1" RowSpacing="1">
+                        <Grid  BackgroundColor="Black" ColumnSpacing="1" RowSpacing="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto"/>
                                 <RowDefinition Height="auto"/>
@@ -59,6 +59,6 @@
                 </BindableLayout.ItemTemplate>
             </StackLayout>
         </ScrollView>
-        <Label Grid.Row="2" x:Name="Lorem_Ipsum_content"  Text="{Binding Lorem_Ipsum}" FontSize="12" Padding="0" SizeChanged="SizeChangedLabel" BackgroundColor="{StaticResource CustomYellow}"/>
+        <Label Grid.Row="2" x:Name="Lorem_Ipsum_content" FontSize="12" Padding="0" SizeChanged="SizeChangedLabel" BackgroundColor="{StaticResource CustomYellow}"/>
     </Grid>
 </views:MvxContentPage>

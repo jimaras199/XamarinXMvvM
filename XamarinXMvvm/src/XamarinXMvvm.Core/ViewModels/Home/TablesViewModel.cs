@@ -14,11 +14,36 @@ namespace XamarinXMvvm.Core.ViewModels.Home
 {
     public class TablesViewModel : MvxViewModel
     {
+        public override async Task Initialize()
+        {
+            await base.Initialize();
+            await WriteJsonAsync().ConfigureAwait(false);
+            subscribe();
+        }
+
+        #region Time
         private ITimeService _timeService;
-        public string Lorem_Ipsum { get; set; }
+        private DateTime _currentTime;    
+        public DateTime CurrentTime
+        {
+            get => _currentTime;
+            set => SetProperty(ref _currentTime, value);
+        }
+        private void subscribe()
+        {
+            _timeService = new TimeService();
+            _timeService.OnTimeUpdated += OnTimeUpdated;
+            System.Diagnostics.Debug.WriteLine($"[App Log] {DateTime.Now:yyyy-MM-dd HH:mm:ss}: Subscribed to timeService");
+        }
+        private void OnTimeUpdated(object sender, DateTime currentTime)
+        {
+            CurrentTime = currentTime;
+        }
+        #endregion
+
+        #region RawJson
         public string Rawjson { get; set; }
-        public ObservableCollection<JsonContent> ListJson { get; set; }
-        public class JsonContent
+        public class JsonItem
         {
             public string Id { get; set; }
             public string Name { get; set; }
@@ -31,63 +56,52 @@ namespace XamarinXMvvm.Core.ViewModels.Home
             public string Color { get; set; }
             public string Category { get; set; }
         }
-        private DateTime _currentTime;
-    
-        // Property to store the current time
-        public DateTime CurrentTime
+        public ObservableCollection<JsonItem> ListJson { get; set; }
+        private async Task WriteJsonAsync()
         {
-            get => _currentTime;
-            set => SetProperty(ref _currentTime, value);
-        }
-
-        private void OnTimeUpdated(object sender, DateTime currentTime)
-        {
-            CurrentTime = currentTime;
-        }
-
-        public override async Task Initialize()
-        {
-            await base.Initialize();
-            await RenderJsonAsync().ConfigureAwait(false);
-            _timeService = new TimeService();
-            _timeService.OnTimeUpdated += OnTimeUpdated;
-
-            Console.WriteLine("ListJson items: " + ListJson.Count());
-            Console.WriteLine("ModelView Initialize done");
-        }
-        private async Task RenderJsonAsync()
-        {
-            ListJson = new ObservableCollection<JsonContent>();
+            ListJson = new ObservableCollection<JsonItem>();
             var json = await ReadJsonFileAsync().ConfigureAwait(true);
-            JsonConvert.DeserializeObject<List<JsonContent>>(json).ForEach(item => ListJson.Add(item));
-            Console.WriteLine("LisJson items: " + ListJson.Count());
-            renderRawLines(ListJson);
-            Console.WriteLine("ModelView RenderJsonAsync done");
+            if (!json.Equals(""))
+            {
+                JsonConvert.DeserializeObject<List<JsonItem>>(json).ForEach(item => ListJson.Add(item));
+                System.Diagnostics.Debug.WriteLine($"[App Log] {DateTime.Now:yyyy-MM-dd HH:mm:ss}: {ListJson.Count()} items loaded");
+            }
+            writeRawLines(ListJson);
         }
-
         private async Task<string> ReadJsonFileAsync()
         {
             System.Reflection.Assembly assembly = typeof(TablesViewModel).Assembly;
             using Stream stream = assembly.GetManifestResourceStream("XamarinXMvvm.Core.Demo_toys_db.json");
+            if (stream == null)
+            {
+                System.Diagnostics.Debug.WriteLine($"[App Log] {DateTime.Now:yyyy-MM-dd HH:mm:ss}: Unable to find Demo_toys_db.json");
+                return "";
+            }
+            System.Diagnostics.Debug.WriteLine($"[App Log] {DateTime.Now:yyyy-MM-dd HH:mm:ss}: Demo_toys_db.json read successfully");
             using var reader = new StreamReader(stream);
             {
                 return await reader.ReadToEndAsync().ConfigureAwait(false);
             }
         }
-
-        private void renderRawLines(IEnumerable<JsonContent> list)
+        private void writeRawLines(IEnumerable<JsonItem> list)
         {
-            foreach (JsonContent item in list)
+            if (list.Count() != 0)
             {
-                foreach (System.Reflection.PropertyInfo property in item.GetType().GetProperties())
+                foreach (JsonItem item in list)
                 {
-                    Rawjson += $"{property.Name}: {property.GetValue(item)}" + Environment.NewLine;
+                    foreach (System.Reflection.PropertyInfo property in item.GetType().GetProperties())
+                    {
+                        Rawjson += $"{property.Name}: {property.GetValue(item)}" + Environment.NewLine;
+                    }
+                    Rawjson += Environment.NewLine;
                 }
-                Rawjson += Environment.NewLine;
+                // Deleting unnecessary last lines
+                Rawjson = Rawjson.Substring(0, Rawjson.LastIndexOf(Environment.NewLine));
+                Rawjson = Rawjson.Substring(0, Rawjson.LastIndexOf(Environment.NewLine));
             }
-            // Deleting unnecessary last new lines.
-            Rawjson = Rawjson.Substring(0, Rawjson.LastIndexOf(Environment.NewLine));
-            Rawjson = Rawjson.Substring(0, Rawjson.LastIndexOf(Environment.NewLine));
+            else
+                Rawjson = "Unable to read Demo_toys_db.json";
         }
+        #endregion
     }
 }

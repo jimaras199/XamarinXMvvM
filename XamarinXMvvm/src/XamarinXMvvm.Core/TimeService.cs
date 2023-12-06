@@ -13,7 +13,7 @@ namespace XamarinXMvvm.Core
     public class TimeService : ITimeService
     {
         private bool _isUpdating;
-        private const int UpdateIntervalMilliseconds = 1000;
+        private const int SecondDelay = 1000;
         public event EventHandler<DateTime> OnTimeUpdated;
 
         public TimeService()
@@ -27,7 +27,7 @@ namespace XamarinXMvvm.Core
             {
                 DateTime currentTime = DateTime.Now;
                 OnTimeUpdated?.Invoke(this, currentTime);
-                await Task.Delay(UpdateIntervalMilliseconds);
+                await Task.Delay(SecondDelay);
             }
         }
     }

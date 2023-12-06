@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using MvvmCross.Commands;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
+using System;
 
 namespace XamarinXMvvm.Core.ViewModels.Home
 {
@@ -15,7 +16,6 @@ namespace XamarinXMvvm.Core.ViewModels.Home
         {
             _navigationService = navigationService;
         }
-
         public ICommand TablesCommand
         {
             get
@@ -24,7 +24,6 @@ namespace XamarinXMvvm.Core.ViewModels.Home
                 return _tablesCommand;
             }
         }
-
         public ICommand BoatCommand
         {
             get
@@ -33,12 +32,10 @@ namespace XamarinXMvvm.Core.ViewModels.Home
                 return _boatCommand;
             }
         }
-
         private async Task ExecuteTablesCommandAsync()
         {
             await _navigationService.Navigate<TablesViewModel>();
         }
-
         private async Task ExecuteBoatCommandAsync()
         {
             await _navigationService.Navigate<BoatViewModel>();

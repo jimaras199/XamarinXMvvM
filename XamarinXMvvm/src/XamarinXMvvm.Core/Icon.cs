@@ -65,8 +65,10 @@ namespace XamarinXMvvm.Core
                 canvas.Clear();
 
                 if (string.IsNullOrEmpty(ResourceId))
+                {
+                    System.Diagnostics.Debug.WriteLine($"[App Log] {DateTime.Now:yyyy-MM-dd HH:mm:ss}: Unable to find {ResourceId}");
                     return;
-
+                }
                 using Stream stream = GetType().Assembly.GetManifestResourceStream(ResourceId);
                 var svg = new SKSvg();
                 try
@@ -86,8 +88,9 @@ namespace XamarinXMvvm.Core
                     canvas.Translate(-bounds.MidX, -bounds.MidY);
 
                     canvas.DrawPicture(svg.Picture);
+                    System.Diagnostics.Debug.WriteLine($"[App Log] {DateTime.Now:yyyy-MM-dd HH:mm:ss}: {ResourceId} rendered successfully");
                 }
-                catch(Exception ex) { Console.WriteLine("An exception occurred: " + ex.Message); }
+                catch (Exception ex) { Console.WriteLine("An exception occurred: " + ex.Message); }
             }
             #endregion
         }
