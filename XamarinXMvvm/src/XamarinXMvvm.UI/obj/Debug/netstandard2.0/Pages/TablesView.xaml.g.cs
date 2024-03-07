@@ -17,8 +17,16 @@ namespace XamarinXMvvm.UI.Pages {
     public partial class TablesView : global::MvvmCross.Forms.Views.MvxContentPage<global::XamarinXMvvm.Core.ViewModels.Home.TablesViewModel> {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.StackLayout StackTable;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.Label Lorem_Ipsum_content;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(TablesView));
+            StackTable = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.StackLayout>(this, "StackTable");
+            Lorem_Ipsum_content = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "Lorem_Ipsum_content");
         }
     }
 }

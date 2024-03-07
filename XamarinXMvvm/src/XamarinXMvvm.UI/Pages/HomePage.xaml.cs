@@ -18,17 +18,7 @@ namespace XamarinXMvvm.UI.Pages
         public HomePage()
         {
             InitializeComponent();
-        }
-
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-
-            if (Application.Current.MainPage is NavigationPage navigationPage)
-            {
-                navigationPage.BarTextColor = Color.White;
-                navigationPage.BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"];
-            }
+            System.Diagnostics.Debug.WriteLine($"[App Log] {DateTime.Now:yyyy-MM-dd HH:mm:ss}: HomeView initialized!");
         }
     }
 }

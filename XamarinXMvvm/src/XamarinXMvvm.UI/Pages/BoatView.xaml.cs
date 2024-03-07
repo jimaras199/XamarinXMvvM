@@ -1,3 +1,6 @@
+using System;
+using Xamarin.Forms;
+using MvvmCross.Navigation;
 using MvvmCross.Forms.Presenters.Attributes;
 using MvvmCross.Forms.Views;
 using Xamarin.Forms.Xaml;
@@ -12,6 +15,7 @@ namespace XamarinXMvvm.UI.Pages
         public BoatView()
         {
             InitializeComponent();
+            System.Diagnostics.Debug.WriteLine($"[App Log] {DateTime.Now:yyyy-MM-dd HH:mm:ss}: BoatView initialized!");
         }
     }
 }

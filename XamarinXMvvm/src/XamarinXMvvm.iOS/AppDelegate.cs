@@ -1,4 +1,4 @@
-﻿using Foundation;
+using Foundation;
 using MvvmCross.Forms.Platforms.Ios.Core;
 
 namespace XamarinXMvvm.iOS

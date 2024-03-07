@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -6,7 +6,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Demo_toys_db.json" />
+    <None Remove="images\surf.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Demo_toys_db.json" />
+    <EmbeddedResource Include="images\surf.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MvvmCross" Version="8.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="SkiaSharp.Extended" Version="1.60.0" />
+    <PackageReference Include="SkiaSharp.Svg" Version="1.60.0" />
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="2.88.6" />
+    <PackageReference Include="Xamarin.FFImageLoading.Svg" Version="2.4.11.982" />
+    <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.4.11.982" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />
   </ItemGroup>
 
 </Project>

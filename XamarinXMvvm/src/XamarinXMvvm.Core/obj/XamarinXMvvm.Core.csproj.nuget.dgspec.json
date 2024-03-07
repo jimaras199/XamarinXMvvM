@@ -54,6 +54,34 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "SkiaSharp.Extended": {
+              "target": "Package",
+              "version": "[1.60.0, )"
+            },
+            "SkiaSharp.Svg": {
+              "target": "Package",
+              "version": "[1.60.0, )"
+            },
+            "SkiaSharp.Views.Forms": {
+              "target": "Package",
+              "version": "[2.88.6, )"
+            },
+            "Xamarin.FFImageLoading.Svg": {
+              "target": "Package",
+              "version": "[2.4.11.982, )"
+            },
+            "Xamarin.FFImageLoading.Svg.Forms": {
+              "target": "Package",
+              "version": "[2.4.11.982, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[5.0.0.2337, )"
             }
           },
           "imports": [
@@ -67,7 +95,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

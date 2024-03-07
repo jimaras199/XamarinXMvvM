@@ -15,4 +15,8 @@
     <Color x:Key="PrimaryTextColor">#000000</Color>
     <Color x:Key="SecondaryTextColor">#ffffff</Color>
 
+    <Color x:Key="CustomRed">#fe2700</Color>
+    <Color x:Key="CustomBlue">#5487cf</Color>
+    <Color x:Key="CustomYellow">#fefa00</Color>
+
 </ResourceDictionary>
